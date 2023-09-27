@@ -17,3 +17,13 @@ function displayForecast(data) {
 function addToSearchHistory(city) {
    //  placeholder to display and store the data that we searchedd
 }
+document.getElementById('search-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    const cityInput = document.getElementById('city-input');
+    const city = cityInput.value.trim();
+    if (city !== '') {
+        fetchWeatherData(city);
+        addToSearchHistory(city);
+        cityInput.value = '';
+    }
+});
