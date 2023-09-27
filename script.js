@@ -1,7 +1,6 @@
-const apiKey = 'YOUR_API_KEY';
-function fetchWeatherData(city) {
-    // place older to get the data  we need some type of function
-}
+const apiKey = '9ff2dd03aa5ea0140a3b500ecf444723';
+
+
 
 //place older to  display current weather data 
 function displayCurrentWeather(data) {
