@@ -27,3 +27,12 @@ document.getElementById('search-form').addEventListener('submit', function(event
         cityInput.value = '';
     }
 });
+document.getElementById('search-history').addEventListener('click', function(event) {
+    if (event.target.tagName === 'LI') {
+        const city = event.target.textContent;
+        fetchWeatherData(city);
+    }
+});
+
+// Initial code to load  my current city of atlanta 
+fetchWeatherData('Atlanta');
