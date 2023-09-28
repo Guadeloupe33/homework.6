@@ -26,6 +26,7 @@ function fetchWeatherData(city) {
 }
 
 // Function to display current weather data
+// Function to display current weather data
 function displayCurrentWeather(data) {
     // Update the HTML to display current weather data
     const cityName = data.name;
@@ -35,14 +36,25 @@ function displayCurrentWeather(data) {
     const humidity = data.main.humidity;
     const windSpeed = data.wind.speed;
 
-    // Update the HTML elements with the data
-    document.getElementById('city-name').textContent = cityName;
-    document.getElementById('current-date').textContent = date;
-    document.getElementById('weather-icon').src = `https://openweathermap.org/img/wn/${weatherIcon}.png`;
-    document.getElementById('temperature').textContent = `${temperature}°F`; // Temperature in Fahrenheit
-    document.getElementById('humidity').textContent = `Humidity: ${humidity}%`;
-    document.getElementById('wind-speed').textContent = `Wind Speed: ${windSpeed} m/s`;
+    // Create a card for current weather data
+    const currentWeatherCard = document.createElement('div');
+    currentWeatherCard.classList.add('weather-card');
+    currentWeatherCard.innerHTML = `
+        <h2>Current Weather</h2>
+        <h3>${cityName}</h3>
+        <p>Date: ${date}</p>
+        <img src="https://openweathermap.org/img/wn/${weatherIcon}.png" alt="Weather Icon">
+        <p>Temperature: ${temperature}°F</p> <!-- Temperature in Fahrenheit -->
+        <p>Humidity: ${humidity}%</p>
+        <p>Wind Speed: ${windSpeed} m/s</p>
+    `;
+
+    // Display the current weather card in the current-weather section
+    const currentWeatherSection = document.getElementById('current-weather');
+    currentWeatherSection.innerHTML = '';
+    currentWeatherSection.appendChild(currentWeatherCard);
 }
+
 
 // Function to display 5-day forecast data
 function displayForecast(data) {
@@ -104,4 +116,4 @@ document.getElementById('search-form').addEventListener('submit', function(event
 });
 
 // Initial code to load some default data
-fetchWeatherData('New York');
+fetchWeatherData('Atlanta');

@@ -1,10 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=w, initial-scale=1.0">
-    <title>5  day weather forecast</title>
     <link rel="stylesheet" href="style.css">
+    <!-- ... (existing head content) ... -->
 </head>
 <body>
     <header>
@@ -14,27 +12,24 @@
             <button type="submit">Search</button>
         </form>
     </header>
+
+    <aside>
+        <h2>Search History</h2>
+        <ul id="search-history">
+            <!-- Display search history here -->
+        </ul>
+    </aside>
+
     <main>
         <section id="current-weather">
-            <!--  this is the little spot to display the current weather. -->
+            <!-- Display current weather data here -->
         </section>
         
         <section id="forecast">
-            <!-- we gonna put the 5 day weather here -->
+            <!-- Display 5-day forecast data here -->
         </section>
     </main>
-    <section id="forecast">
-        <!-- Display 5-day forecast data here -->
-    </section>
-</main>
-
-<aside>
-    <h2>Search History</h2>
-    <ul id="search-history">
-        <!-- Display search history here -->
-    </ul>
-</aside>
-
-<script src="script.js"></script>
+    
+    <script src="script.js"></script>
 </body>
 </html>
