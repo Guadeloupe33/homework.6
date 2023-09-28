@@ -115,5 +115,5 @@ document.getElementById('search-form').addEventListener('submit', function(event
     }
 });
 
-// Initial code to load some default data
+// Initial code to load atlanta has the default data
 fetchWeatherData('Atlanta');
