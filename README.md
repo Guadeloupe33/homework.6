@@ -1,6 +1,6 @@
 # homework.6# Table of Contents 
 
-<img width="30px" src="homework 5 screenshot .jpg" alt="image_name png" />
+<img width="30px" src="homework 6.jpg" alt="image_name png" />
 
 - [Description]  
 - [Install]
